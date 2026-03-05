@@ -11,7 +11,7 @@
     
     <h2><b>A little about me:</b></h2>
     <ul>
-      <li>I currently enrolled in <a href=https://www.auckland.ac.nz/en.html"> Univerisity of Auckland.</a></li>
+      <li>I currently enrolled in <a href= "https://www.auckland.ac.nz/en.html"> University of Auckland</a>.</li>
       <li><i> I am undertaking a degree in Computer Science.</i></li> 
       <li><i> I am taking STATS 220 because the course seems fun with several projects.</i></li>
       <li><i> I am interested in learning about github.</i></li>
