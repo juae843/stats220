@@ -3,9 +3,9 @@
 ## This is my repo for STATS 220.
 ### A little about me:
 * I currently enrolled in [University of Auckland](https://www.auckland.ac.nz/en.html)
-* *I am undertaking a degree in Computer Science.*
-* *I am taking STATS 220 because the course seems fun with several projects.*
-* *I am interested in learning about github.*
+* **I am undertaking a degree in Computer Science.**
+* **I am taking STATS 220 because the course seems fun with several projects.**
+* **I am interested in learning about github.**
 
 
 ### This semester I'm taking ... 
