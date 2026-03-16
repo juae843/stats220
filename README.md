@@ -15,7 +15,7 @@
 3. *Stats 220*
 4. *Stats 330* 
 
-you can check these courses in the [course outlines links](https://study.auckland.ac.nz/ords/r/uoa/catalogue/browse2?p4_browse_id=01&_gl=1*7v9kxg*_gcl_au*MTU5MTcxNTQxMy4xNzcwNzcwMzIw*_ga*MTA1MzkzNjkyMi4xNjc3NDg0MDEz*_ga_SJ5FRP7YTL*czE3NzI2NjUxMjEkbzE2MCRnMCR0MTc3MjY2NTEyMSRqNjAkbDAkaDA.)
+You can check these courses in the [course outlines](https://courseoutline.auckland.ac.nz/).
 
 A meme that captures how I currently feel:
 ![meme](https://c.tenor.com/8druEACXtX8AAAAd/tenor.gif)
