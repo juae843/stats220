@@ -1,0 +1,120 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+library(tidyverse)
+
+logged_data <- read_csv("A survey for a daily walk  (Responses) - Form responses 1.csv")
+
+#renamed the data
+latest_data <- logged_data %>%
+  rename(
+    date = Timestamp,
+    steps = `How many steps did you take during your walk today?`,
+    purpose = `What was the purpose of your walk?`,
+    weather = `How is the weather like today?`,
+    feeling = `How do you feel today?`
+)
+
+mean_step <- mean(latest_data$steps, na.rm = TRUE)
+maximum_step <- max(latest_data$steps, na.rm = TRUE)
+minimum_step <- min(latest_data$steps, na.rm = TRUE)
+```
+
+```{css}
+body {
+  background-color: #87CEEB;
+}
+h2 {
+text-align: center;
+font-size: 35px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 {
+ margin-left: 300px;
+  margin-right: 300px;
+}
+
+h3 {
+ font-size : 20px;
+ margin-left: 450px;
+
+
+}
+
+h5 {
+   font-size: 20px;
+   color: red;
+   margin-left: 300px;
+  margin-right: 300px;
+}
+
+.box {
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px 50px;
+  border-radius: 10px;
+}
+
+```
+
+
+## How The Weather And Feelings Affect Daily Steps!
+
+#### This report shows a survey on the daily walking steps. It focuses on how much people walk and how their daily steps are related to weather and feelings. The survey also includes the purpose of each walk.
+
+#### The survey has been recorded since 29th March 2026 and there were four questions in the survey to gather ideas of daily walk. The four question were: "How many steps did you take during your walk today?", "What was the purpose of your walk?", "How is the weather like today?", "How do you feel today?". 
+
+
+### (Figure1)
+```{r}
+bar_chart1 <- latest_data %>%
+  group_by(feeling) %>%
+  summarise(avg_steps = mean(steps, na.rm = TRUE)) %>%
+  ggplot(aes(x = feeling, y = avg_steps)) +
+  geom_col(fill = "blue") +
+  labs(
+    title = "Average Steps by feeling",
+    x = "feeling",
+    y = "Average Steps"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+bar_chart1
+```
+
+##### The graph (Figure1) shows the relationship between the feelings and daily steps.
+
+### (Figure2)
+```{r}
+#bar chart for the relationship between average steps and the weather.
+bar_chart2 <- latest_data %>%
+  group_by(weather) %>%
+  summarise(avg_steps = mean(steps, na.rm = TRUE)) %>%
+  ggplot(aes(x = weather, y = avg_steps)) +
+  geom_col(fill = "red") +
+  labs(
+    title = "Average Steps by Weather",
+    x = "Weather",
+    y = "Average Steps"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+bar_chart2
+```
+
+##### The graph (Figure2) shows the relationship between weather and daily steps. 
+
+
+##### The maximum number of steps in the survey is approximately `r as.integer(maximum_step)`, the mean number of steps is approximately `r as.integer(mean_step, 2)`, and the minimum number of steps is approximately `r as.integer(minimum_step)`.
+
+![](https://c.tenor.com/-qBsG1HwR4oAAAAC/tenor.gif)
