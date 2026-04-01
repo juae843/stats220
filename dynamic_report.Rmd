@@ -125,4 +125,4 @@ bar_chart2
 ##### The graph (Figure2) shows the relationship between weather and daily steps. 
 
 
-##### The maximum number of steps in the survey is approximately `r round(maximum_step)`, the mean number of steps is approximately `r round(mean_step, 2)`, and the minimum number of steps is approximately `r round(minimum_step)`.
+
