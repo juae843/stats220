@@ -17,7 +17,8 @@ latest_data <- logged_data %>%
     purpose = `What was the purpose of your walk?`,
     weather = `How is the weather like today?`,
     feeling = `How do you feel today?`
-)
+)%>%
+  mutate(steps = as.numeric(steps))
 
 ```
 
