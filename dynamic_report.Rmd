@@ -4,11 +4,8 @@ output: html_fragment
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=TRUE)
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 library(tidyverse)
-library(readr)
-library(dplyr)
-library(ggplot2)
 
 logged_data <- read_csv("walk_data.csv")
 
@@ -21,7 +18,7 @@ latest_data <- logged_data %>%
     weather = `How is the weather like today?`,
     feeling = `How do you feel today?`
 )
-latest_data$steps <- as.numeric(latest_data$steps)
+
 mean_step <- mean(latest_data$steps, na.rm = TRUE)
 maximum_step <- max(latest_data$steps, na.rm = TRUE)
 minimum_step <- min(latest_data$steps, na.rm = TRUE)
@@ -117,6 +114,5 @@ bar_chart2
 
 ##### The graph (Figure2) shows the relationship between weather and daily steps. 
 
-##### The maximum number of steps in the survey is approximately `r round(maximum_step)`, the mean number of steps is approximately `r round(mean_step, 2)`, and the minimum number of steps is approximately `r round(minimum_step)`.
 
-![](https://c.tenor.com/-qBsG1HwR4oAAAAC/tenor.gif)
+##### The maximum number of steps in the survey is approximately `r round(maximum_step)`, the mean number of steps is approximately `r round(mean_step, 2)`, and the minimum number of steps is approximately `r round(minimum_step)`.
