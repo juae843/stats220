@@ -108,7 +108,7 @@ bar_chart2
 
 ##### The maximum number of steps in the survey is approximately `r round(maximum_step)`, the mean number of steps is approximately `r round(mean_step, 2)`, and the minimum number of steps is approximately `r round(minimum_step)`.
 
-##### This is the cute mikimouse walking GIF.
+#### This is the cute mikimouse walking GIF.
 ![walking](https://media.tenor.com/GvdVZKiNSKMAAAAM/walk.gif)
 
 
