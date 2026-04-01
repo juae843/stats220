@@ -18,7 +18,7 @@ latest_data <- logged_data %>%
     weather = `How is the weather like today?`,
     feeling = `How do you feel today?`
 )
-
+latest_data$steps <- as.numeric(latest_data$steps)
 mean_step <- mean(latest_data$steps, na.rm = TRUE)
 maximum_step <- max(latest_data$steps, na.rm = TRUE)
 minimum_step <- min(latest_data$steps, na.rm = TRUE)
