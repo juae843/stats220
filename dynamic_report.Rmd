@@ -17,14 +17,8 @@ latest_data <- logged_data %>%
     purpose = `What was the purpose of your walk?`,
     weather = `How is the weather like today?`,
     feeling = `How do you feel today?`
-)%>%
-  mutate(
-    steps = as.numeric(steps)
-  )
+)
 
-mean_step <- mean(latest_data$steps, na.rm = TRUE)
-maximum_step <- max(latest_data$steps, na.rm = TRUE)
-minimum_step <- min(latest_data$steps, na.rm = TRUE)
 ```
 
 ```{css}
@@ -61,6 +55,12 @@ h5 {
   margin-right: 300px;
 }
 
+.box {
+  background-color: #fff;
+  padding: 15px;
+  margin: 20px 50px;
+  border-radius: 10px;
+}
 
 ```
 
@@ -110,6 +110,14 @@ bar_chart2
 ```
 
 ##### The graph (Figure2) shows the relationship between weather and daily steps. 
+
+```{r}
+mean_step <- mean(latest_data$steps, na.rm = TRUE)
+maximum_step <- max(latest_data$steps, na.rm = TRUE)
+minimum_step <- min(latest_data$steps, na.rm = TRUE)
+```
+##### The maximum number of steps in the survey is approximately `r round(maximum_step)`, the mean number of steps is approximately `r round(mean_step, 2)`, and the minimum number of steps is approximately `r round(minimum_step)`.
+
 
 
 
