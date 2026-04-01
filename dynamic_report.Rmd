@@ -17,7 +17,10 @@ latest_data <- logged_data %>%
     purpose = `What was the purpose of your walk?`,
     weather = `How is the weather like today?`,
     feeling = `How do you feel today?`
-)
+)%>%
+  mutate(
+    steps = as.numeric(steps)
+  )
 
 mean_step <- mean(latest_data$steps, na.rm = TRUE)
 maximum_step <- max(latest_data$steps, na.rm = TRUE)
@@ -58,12 +61,6 @@ h5 {
   margin-right: 300px;
 }
 
-.box {
-  background-color: #fff;
-  padding: 15px;
-  margin: 20px 50px;
-  border-radius: 10px;
-}
 
 ```
 
